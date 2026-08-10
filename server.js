@@ -20,7 +20,7 @@ const upload=multer({storage,limits:{fileSize:5*1024*1024},fileFilter:(req,file,
 app.use(express.json());app.use(express.urlencoded({extended:true}));
 app.use(session({secret:process.env.SESSION_SECRET||"CHANGE_THIS_SECRET",resave:false,saveUninitialized:false,cookie:{httpOnly:true,sameSite:"lax",secure:false,maxAge:8*60*60*1000}}));
 app.use("/uploads",express.static(uploadDir));app.use(express.static(path.join(__dirname,"public")));
-
+app.use(express.static(__dirname));
 function hash(x){return crypto.createHash("sha256").update(x).digest("hex")}
 function save(db){fs.writeFileSync(DATA,JSON.stringify(db,null,2))}
 function load(){
