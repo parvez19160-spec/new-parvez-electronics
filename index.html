@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Parvez Nova Electronics — Powering What Matters.</title>
+<meta name="description" content="Parvez Nova Electronics — premium electronics, gadgets and accessories.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--ink:#0e1116;--muted:#747982;--gold:#c9a45c;--gold2:#e3c27b;--cream:#f7f4ee;--card:#fff;--line:#e8e5de;--purple:#5a35df}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fbfaf8;color:var(--ink);font-family:"DM Sans",Arial,sans-serif}
+a{text-decoration:none;color:inherit}.announcement{background:var(--ink);color:#fff;text-align:center;padding:9px;font-size:12px;letter-spacing:.7px}.announcement b{color:var(--gold2)}
+.header{background:#fff;display:flex;align-items:center;justify-content:space-between;padding:20px clamp(20px,6vw,90px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:center;gap:13px}.mark{width:54px;height:54px;border-radius:16px;background:linear-gradient(145deg,#17191e,#343842);border:1px solid #b99550;display:grid;place-items:center;color:#f4d18a;font-family:Georgia;font-size:22px;box-shadow:0 6px 20px #0002}.brand h1{font:700 24px "Playfair Display",serif;margin:0}.brand p{margin:3px 0 0;color:var(--muted);font-size:12px;letter-spacing:1px}.nav{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600}.nav a:hover{color:#9b762e}.hamb{display:none;font-size:28px}
+.hero{max-width:1280px;margin:28px auto;padding:0 22px}.heroBox{min-height:520px;border-radius:30px;overflow:hidden;position:relative;background:linear-gradient(90deg,#090b10e8 0%,#090b1098 48%,#090b1020 100%),url("https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1800&q=85") center/cover;display:flex;align-items:center}.heroContent{padding:70px;max-width:700px;color:#fff}.eyebrow{color:#e7c981;letter-spacing:3px;text-transform:uppercase;font-size:12px;font-weight:700}.hero h2{font:700 clamp(42px,6vw,72px)/.98 "Playfair Display",serif;margin:18px 0}.hero p{font-size:17px;color:#e8e8e8;max-width:570px;line-height:1.7}.cta{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#111;padding:14px 20px;border-radius:12px;font-weight:700;margin-top:16px}.cta:hover{background:var(--gold2)}.trust{display:flex;gap:28px;margin-top:35px;color:#ddd;font-size:12px}.trust span:before{content:"✓";color:#e7c981;margin-right:7px}
+.section{max-width:1200px;margin:0 auto;padding:55px 22px}.sectionHead{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.sectionHead h2{font:700 38px "Playfair Display",serif;margin:0}.sectionHead p{color:var(--muted);margin:7px 0 0}.view{font-size:13px;font-weight:700;border-bottom:1px solid var(--gold);padding-bottom:4px}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.category{background:var(--ink);color:#fff;border-radius:18px;padding:24px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.category:after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:#c9a45c18;right:-30px;bottom:-40px}.category .ico{font-size:32px}.category b{font-size:18px}.category small{color:#b9bdc5;margin-top:5px}
+.tools{display:flex;gap:12px;margin:20px 0}.search{flex:1;max-width:620px;height:52px;border:1px solid var(--line);background:#fff;border-radius:13px;display:flex;overflow:hidden}.search input{border:0;outline:0;flex:1;padding:0 17px;font:inherit}.search button{width:58px;border:0;background:var(--ink);color:#fff;font-size:22px}.cartBtn{border:0;background:#fff;border:1px solid var(--line);border-radius:13px;padding:0 18px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s;box-shadow:0 8px 30px #16161608}.card:hover{transform:translateY(-4px);box-shadow:0 14px 35px #16161614}.pic{height:220px;background:linear-gradient(135deg,#f5f3ef,#ebe8e1);display:grid;place-items:center;font-size:70px;overflow:hidden}.pic img{width:100%;height:100%;object-fit:contain}.info{padding:17px}.cat{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#9a7a3a;font-weight:700}.card h3{font-size:17px;margin:7px 0}.desc{color:var(--muted);font-size:12px;line-height:1.5;min-height:35px}.price{font-size:20px;font-weight:700;margin-top:12px}.old{text-decoration:line-through;color:#aaa;font-size:12px;margin-left:5px}.stock{font-size:11px;color:#6d7a69;margin-top:5px}.add{width:100%;margin-top:12px;border:0;background:var(--ink);color:#fff;border-radius:10px;padding:11px;font-weight:700}.add:hover{background:#2b3038}.add:disabled{opacity:.45}
+.banner{background:var(--cream);border-radius:25px;padding:38px;display:flex;justify-content:space-between;align-items:center;gap:25px}.banner h3{font:700 30px "Playfair Display",serif;margin:0 0 8px}.banner p{color:var(--muted);margin:0}.contact{font-weight:700}.contact span{display:block;color:#8e6d2f;margin-top:6px}
+.footer{background:var(--ink);color:#fff;padding:50px max(22px,6vw);margin-top:30px}.footerGrid{max-width:1200px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}.footer h2{font:700 28px "Playfair Display",serif;margin:0}.footer p,.footer li{color:#b9bdc5;font-size:13px;line-height:1.8}.footer ul{list-style:none;padding:0}.copyright{max-width:1200px;margin:35px auto 0;padding-top:20px;border-top:1px solid #ffffff15;color:#858b95;font-size:12px}
+.floatCart{position:fixed;right:20px;bottom:20px;background:var(--gold);color:#111;border-radius:15px;padding:12px 15px;box-shadow:0 12px 35px #0003;z-index:30;font-weight:700;border:0}.badge{background:#111;color:#fff;border-radius:20px;padding:3px 7px;font-size:11px;margin-left:5px}
+.modalbg{display:none;position:fixed;inset:0;background:#0009;z-index:50;align-items:center;justify-content:center;padding:15px}.modal{background:#fff;border-radius:20px;width:min(560px,100%);padding:25px;max-height:92vh;overflow:auto}.modal h2{font:700 30px "Playfair Display",serif;margin:0 0 8px}.modal input,.modal textarea,.modal select{width:100%;padding:12px;margin:6px 0 10px;border:1px solid var(--line);border-radius:10px;font:inherit}.modal textarea{min-height:85px}.modal .submit{background:var(--ink);color:#fff;border:0;padding:13px 18px;border-radius:10px;font-weight:700}.close{float:right;border:0;background:#eee;border-radius:8px;padding:7px 10px}.success{margin-top:12px;background:#edf7ef;padding:13px;border-radius:10px}
+@media(max-width:900px){.nav{display:none}.hamb{display:block}.categories{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr 1fr}.heroContent{padding:50px}.heroBox{min-height:450px}.footerGrid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.header{padding:15px 18px}.brand h1{font-size:20px}.brand p{font-size:10px}.hero{padding:0 12px}.heroBox{min-height:500px}.heroContent{padding:35px 25px}.hero h2{font-size:42px}.trust{gap:10px;flex-wrap:wrap}.section{padding:42px 14px}.sectionHead{display:block}.sectionHead h2{font-size:32px}.categories{gap:10px}.category{min-height:130px;padding:18px}.grid{gap:10px}.pic{height:155px}.info{padding:12px}.card h3{font-size:15px}.desc{display:none}.banner{padding:25px;display:block}.contact{margin-top:18px}.footerGrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="announcement">WELCOME TO <b>PARVEZ NOVA ELECTRONICS</b> · QUALITY TECH, HONESTLY CHOSEN</div>
+<header class="header">
+  <a class="brand" href="#"><div class="mark">PN</div><div><h1>Parvez Nova Electronics</h1><p>POWERING WHAT MATTERS.</p></div></a>
+  <nav class="nav"><a href="#home">Home</a><a href="#categories">Categories</a><a href="#products">Products</a><a href="#contact">Contact</a><a href="/admin">Admin</a></nav>
+  <div class="hamb">☰</div>
+</header>
+<main id="home">
+<section class="hero"><div class="heroBox"><div class="heroContent"><div class="eyebrow">Curated electronics · Everyday essentials</div><h2>Technology, with a little more class.</h2><p>Explore carefully selected electronics, gadgets and accessories from a store built around quality, value and dependable service.</p><a class="cta" href="#products">Explore Collection <span>→</span></a><div class="trust"><span>Genuine products</span><span>Easy ordering</span><span>Personal support</span></div></div></div></section>
+
+<section class="section" id="categories">
+<div class="sectionHead"><div><h2>Shop by category</h2><p>Find the tech you need, without the clutter.</p></div></div>
+<div class="categories">
+<div class="category"><div class="ico">◉</div><div><b>Audio</b><small>Earbuds & speakers</small></div></div>
+<div class="category"><div class="ico">▣</div><div><b>Mobile</b><small>Chargers & accessories</small></div></div>
+<div class="category"><div class="ico">⌚</div><div><b>Wearables</b><small>Smart watches & more</small></div></div>
+<div class="category"><div class="ico">✦</div><div><b>Home Tech</b><small>Useful everyday gadgets</small></div></div>
+</div></section>
+
+<section class="section" id="products">
+<div class="sectionHead"><div><h2>Featured collection</h2><p>Fresh picks from Parvez Nova Electronics.</p></div><a class="view" href="#products">VIEW ALL</a></div>
+<div class="tools"><div class="search"><input id="q" placeholder="Search products..." oninput="render()"><button onclick="render()">⌕</button></div><button class="cartBtn" onclick="checkout()">Cart · <span id="count">0</span></button></div>
+<div class="grid" id="grid"></div></section>
+
+<section class="section" id="contact"><div class="banner"><div><h3>Need help choosing?</h3><p>Talk to Parvez Nova Electronics directly for product and delivery support.</p></div><div class="contact">Call us<span>9800121152</span><span>9735455093</span></div></div></section>
+</main>
+
+<footer class="footer"><div class="footerGrid"><div><h2>Parvez Nova Electronics</h2><p>Powering What Matters. Electronics and everyday technology, chosen with care.</p></div><div><h3>Explore</h3><ul><li>Products</li><li>Categories</li><li>Cart</li></ul></div><div><h3>Contact</h3><p>9800121152<br>9735455093</p></div></div><div class="copyright">© 2026 Parvez Nova Electronics. All rights reserved.</div></footer>
+
+<button class="floatCart" onclick="checkout()">🛒 Cart <span class="badge" id="floatCount">0</span> · ₹<span id="total">0</span></button>
+<div class="modalbg" id="bg"><div class="modal"><button class="close" onclick="closeM()">Close</button><h2>Complete your order</h2><p style="color:#777">We'll use these details to arrange delivery.</p>
+<form onsubmit="place(event)"><input id="name" placeholder="Full name *" required><input id="phone" placeholder="Phone number *" required><input id="email" type="email" placeholder="Email (optional)"><textarea id="address" placeholder="Full delivery address *" required></textarea><input id="city" placeholder="City"><input id="pin" placeholder="PIN code"><select id="payment"><option value="COD">Cash on Delivery</option></select><button class="submit">Place Order</button></form><div id="msg"></div></div></div>
+
+<script>
+let products=[],cart=[];
+async function init(){let d=await fetch('/api/store').then(r=>r.json());products=d.products;render()}
+function icon(p){return p.image?`<img src="${p.image}" alt="${esc(p.name)}">`:p.name.toLowerCase().includes("ear")?"🎧":p.name.toLowerCase().includes("watch")?"⌚":p.name.toLowerCase().includes("charger")?"🔌":"✦"}
+function render(){let q=document.getElementById('q').value.toLowerCase();let list=products.filter(p=>(p.name+" "+p.category+" "+p.description).toLowerCase().includes(q));document.getElementById('grid').innerHTML=list.map(p=>`<article class="card"><div class="pic">${icon(p)}</div><div class="info"><div class="cat">${esc(p.category)}</div><h3>${esc(p.name)}</h3><div class="desc">${esc(p.description)}</div><div class="price">₹${p.price.toLocaleString()} ${p.oldPrice?`<span class="old">₹${p.oldPrice.toLocaleString()}</span>`:""}</div><div class="stock">${p.stock>0?p.stock+" in stock":"Out of stock"}</div><button class="add" ${p.stock<1?"disabled":""} onclick="add(${p.id})">${p.stock>0?"Add to cart":"Out of stock"}</button></div></article>`).join("")}
+function add(id){let x=cart.find(i=>i.id===id);if(x)x.qty++;else cart.push({id,qty:1});update()}
+function update(){let n=cart.reduce((a,x)=>a+x.qty,0),t=cart.reduce((a,x)=>a+products.find(p=>p.id===x.id).price*x.qty,0);document.getElementById('count').textContent=n;document.getElementById('floatCount').textContent=n;document.getElementById('total').textContent=t.toLocaleString()}
+function checkout(){if(!cart.length)return alert("Your cart is empty.");document.getElementById('bg').style.display="flex"}
+function closeM(){document.getElementById('bg').style.display="none"}
+async function place(e){e.preventDefault();let customer={name:name.value,phone:phone.value,email:email.value,address:address.value,city:city.value,pincode:pin.value};let r=await fetch('/api/orders',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({customer,items:cart,paymentMethod:payment.value})});let d=await r.json();if(!r.ok)return alert(d.error||"Order failed");document.getElementById('msg').className="success";document.getElementById('msg').innerHTML="<b>Order confirmed.</b><br>Your Order ID: <b>"+d.orderId+"</b><br>We'll contact you for delivery.";cart=[];update();products=await fetch('/api/store').then(r=>r.json()).then(x=>x.products);render()}
+function esc(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+init();
+</script>
+</body></html>
