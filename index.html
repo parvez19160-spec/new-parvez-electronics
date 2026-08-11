@@ -23,7 +23,20 @@ a{text-decoration:none;color:inherit}.announcement{background:var(--ink);color:#
 .modalbg{display:none;position:fixed;inset:0;background:#0009;z-index:50;align-items:center;justify-content:center;padding:15px}.modal{background:#fff;border-radius:20px;width:min(560px,100%);padding:25px;max-height:92vh;overflow:auto}.modal h2{font:700 30px "Playfair Display",serif;margin:0 0 8px}.modal input,.modal textarea,.modal select{width:100%;padding:12px;margin:6px 0 10px;border:1px solid var(--line);border-radius:10px;font:inherit}.modal textarea{min-height:85px}.modal .submit{background:var(--ink);color:#fff;border:0;padding:13px 18px;border-radius:10px;font-weight:700}.close{float:right;border:0;background:#eee;border-radius:8px;padding:7px 10px}.success{margin-top:12px;background:#edf7ef;padding:13px;border-radius:10px}
 @media(max-width:900px){.nav{display:none}.hamb{display:block}.categories{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr 1fr}.heroContent{padding:50px}.heroBox{min-height:450px}.footerGrid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.header{padding:15px 18px}.brand h1{font-size:20px}.brand p{font-size:10px}.hero{padding:0 12px}.heroBox{min-height:500px}.heroContent{padding:35px 25px}.hero h2{font-size:42px}.trust{gap:10px;flex-wrap:wrap}.section{padding:42px 14px}.sectionHead{display:block}.sectionHead h2{font-size:32px}.categories{gap:10px}.category{min-height:130px;padding:18px}.grid{gap:10px}.pic{height:155px}.info{padding:12px}.card h3{font-size:15px}.desc{display:none}.banner{padding:25px;display:block}.contact{margin-top:18px}.footerGrid{grid-template-columns:1fr}}
-</style>
+@media(max-width:900px){
+  .nav.open{
+    display:flex !important;
+    flex-direction:column;
+    position:absolute;
+    top:100%;
+    right:15px;
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    z-index:999;
+  }
+}</style>
 </head>
 <body>
 <div class="announcement">WELCOME TO <b>PARVEZ NOVA ELECTRONICS</b> · QUALITY TECH, HONESTLY CHOSEN</div>
@@ -70,5 +83,14 @@ function closeM(){document.getElementById('bg').style.display="none"}
 async function place(e){e.preventDefault();let customer={name:name.value,phone:phone.value,email:email.value,address:address.value,city:city.value,pincode:pin.value};let r=await fetch('/api/orders',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({customer,items:cart,paymentMethod:payment.value})});let d=await r.json();if(!r.ok)return alert(d.error||"Order failed");document.getElementById('msg').className="success";document.getElementById('msg').innerHTML="<b>Order confirmed.</b><br>Your Order ID: <b>"+d.orderId+"</b><br>We'll contact you for delivery.";cart=[];update();products=await fetch('/api/store').then(r=>r.json()).then(x=>x.products);render()}
 function esc(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
 init();
+
+const menuBtn = document.querySelector('.hamb');
+const nav = document.querySelector('.nav');
+
+if (menuBtn && nav) {
+  menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+}
 </script>
 </body></html>
